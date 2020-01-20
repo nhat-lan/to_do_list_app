@@ -15,7 +15,7 @@ exports.getListByid = ((listId, res) => {
 
 // POST create a new list
 exports.createNewList = ((data, res) => {
-    db.database().ref(listPath).child('211').set(data).then(response => {
+    db.database().ref(listPath).child('216').set(data).then(response => {
         res.status(200).json({ status: 'Success'});
     }).catch(err => {
         res.status(500).json(err);
