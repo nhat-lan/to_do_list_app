@@ -6,6 +6,7 @@ const accountPath = '/accounts';
 var id = Math.random().toString(36).substring(7);
 
 // GET ACCOUNT
+//
 
 
 // CREATE ACCOUNT
