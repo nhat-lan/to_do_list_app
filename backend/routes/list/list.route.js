@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const listController = require('../../controllers/list.controller.js');
 
-router.route('/tests')
+router.route('/list')
     // GET list by ID
     .get((req, res) => {
         listController.getListByid(req.params.listId, res);

@@ -1,6 +1,6 @@
 const db = require('../config/firebase.js');
 
-const listPath = '/lists';
+const listPath = '/list';
 
 // ADD GENERATE RANDOM ID
 
