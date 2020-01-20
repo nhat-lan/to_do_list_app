@@ -26,7 +26,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ITK-SB-xbw" kind="presentation" id="jHK-ge-4JG"/>
+                                    <segue destination="ITK-SB-xbw" kind="show" id="A4X-N2-Zhw"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ki-MZ-lNq">
@@ -49,7 +49,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="eb9-ui-yyY" kind="presentation" id="xGX-4T-H8m"/>
+                                    <segue destination="eb9-ui-yyY" kind="show" id="Rz3-Vl-Rj1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -85,11 +85,7 @@
                                 <rect key="frame" x="2" y="32" width="414" height="56"/>
                                 <items>
                                     <navigationItem title="Log In" id="yQ9-Yh-Ga9">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrowshape.turn.up.left" catalog="system" id="4Bx-OS-SJK">
-                                            <connections>
-                                                <segue destination="BYZ-38-t0r" kind="presentation" id="G7S-ag-Tre"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrowshape.turn.up.left" catalog="system" id="4Bx-OS-SJK"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -159,6 +155,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CJy-S5-7CF"/>
                     </view>
+                    <navigationItem key="navigationItem" id="OX6-f5-Q13"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ACg-DX-xZJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -179,7 +176,7 @@
                                     <navigationItem title="Sign Up" id="0OD-ZF-cI3">
                                         <barButtonItem key="leftBarButtonItem" title="Item" image="arrowshape.turn.up.left" catalog="system" id="9OV-Nv-Hna">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="presentation" id="rpk-4d-L6v"/>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="1Fc-w6-cke"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -250,9 +247,6 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <segue destination="ITK-SB-xbw" kind="presentation" id="d45-bc-MmD"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -293,6 +287,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wGi-nq-vYW"/>
                     </view>
+                    <navigationItem key="navigationItem" id="bx3-cD-mEr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r1H-jX-KEY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -321,7 +316,7 @@
         <image name="arrowshape.turn.up.left" catalog="system" width="64" height="52"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jHK-ge-4JG"/>
-        <segue reference="G7S-ag-Tre"/>
+        <segue reference="Rz3-Vl-Rj1"/>
+        <segue reference="1Fc-w6-cke"/>
     </inferredMetricsTieBreakers>
 </document>
