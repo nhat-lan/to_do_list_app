@@ -3,6 +3,7 @@ const db = require('../config/firebase.js');
 const listPath = '/list';
 
 // ADD GENERATE RANDOM ID
+var id = Math.random().toString(36).substring(7);
 
 // GET list by Id
 exports.getListByid = ((listId, res) => {
@@ -15,7 +16,7 @@ exports.getListByid = ((listId, res) => {
 
 // POST create a new list
 exports.createNewList = ((data, res) => {
-    db.database().ref(listPath).child('216').set(data).then(response => {
+    db.database().ref(listPath).child(id).set(data).then(response => {
         res.status(200).json({ status: 'Success'});
     }).catch(err => {
         res.status(500).json(err);
