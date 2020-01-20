@@ -5,13 +5,9 @@ const accountPath = '/accounts';
 
 var id = Math.random().toString(36).substring(7);
 
-// GET ACCOUNT
-//
-
-
 // CREATE ACCOUNT
 exports.createNewAccount = ((data, res) => {
-    db.database().ref(accountPath).child(id).set(data).then(response => {
+    db.database().ref(accountPath).child(data.username).set(data).then(response => {
         res.status(200).json({ status: 'Success'});
     }).catch(err => {
         res.status(500).json(err);
