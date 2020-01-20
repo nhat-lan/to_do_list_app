@@ -1,8 +1,8 @@
 const db = require('../config/firebase.js');
 
-const taskPath = '/tasks';
+const taskPath = '/task';
 
-// GET list by Id
+// GET task by Id
 exports.getTaskByid = ((taskId, res) => {
     const ref = db.database().ref(taskPath).child(`${taskId}`);
 
@@ -11,7 +11,7 @@ exports.getTaskByid = ((taskId, res) => {
     });
 });
 
-// POST create a new list
+// POST create a new task
 exports.createNewTask = ((data, res) => {
     db.database().ref(taskPath).child('216').set(data).then(response => {
         res.status(200).json({ status: 'Success'});
@@ -20,7 +20,7 @@ exports.createNewTask = ((data, res) => {
     });
 });
 
-// DELETE delete list by id
+// DELETE delete task by id
 exports.deleteTaskByid = ((taskId, res) => {
     db.database().ref(taskPath).child(`${taskId}`).remove().then(response => {
         res.status(200).json({ status: 'Success'});
@@ -29,7 +29,7 @@ exports.deleteTaskByid = ((taskId, res) => {
     });
 });
 
-// UPDATE list by id
+// UPDATE task by id
 exports.updateTaskData = ((data, taskId, res) => {
     db.database().ref(taskPath).child(`${taskId}`).update(data).then(() => {
         res.status(200).json({ status: 'Updated'});

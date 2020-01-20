@@ -3,6 +3,8 @@ const dotenv = require('dotenv');
 const bodyParse = require('body-parser');
 const testRoute = require('./routes/test/test.route.js')
 const listRoute = require('./routes/list/list.route.js')
+const taskRoute = require('./routes/task/task.route.js')
+
 
 
 const app = express();
@@ -17,6 +19,7 @@ app.get('/test', (req, res) => {
 
 app.use('/', testRoute )
 app.use('/', listRoute )
+app.use('/', taskRoute )
 // start server on port: 8080
 const server = app.listen(process.env.PORT || 8080, () => {
   console.log(`Running on port: ${process.env.PORT}`);
