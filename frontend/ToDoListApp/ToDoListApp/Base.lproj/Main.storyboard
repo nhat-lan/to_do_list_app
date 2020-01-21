@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ToDoListApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="welcome" id="BYZ-38-t0r" customClass="ViewController" customModule="ToDoListApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -100,9 +100,6 @@
                                 <rect key="frame" x="111" y="240" width="224" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="username"/>
-                                <connections>
-                                    <action selector="usernameTextField:" destination="ITK-SB-xbw" eventType="editingDidEnd" id="t0r-WP-fBO"/>
-                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="25" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="swR-un-OyV" userLabel="password">
                                 <rect key="frame" x="111" y="351" width="224" height="34"/>
@@ -138,9 +135,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="signinAction:" destination="ITK-SB-xbw" eventType="touchUpInside" id="NKO-sE-v2w"/>
-                                    <action selector="signinButtonAction:" destination="ITK-SB-xbw" eventType="touchUpInside" id="kuw-od-Y7h"/>
-                                    <action selector="signinButtonAction:forEvent:" destination="ITK-SB-xbw" eventType="touchUpInside" id="5ep-88-HAq"/>
+                                    <action selector="singinButtonAction:" destination="ITK-SB-xbw" eventType="touchUpInside" id="NfO-Bj-pSa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -172,9 +167,9 @@
                         <viewLayoutGuide key="safeArea" id="CJy-S5-7CF"/>
                     </view>
                     <connections>
-                        <outlet property="passwordTextField" destination="swR-un-OyV" id="Ffp-Us-7Nl"/>
-                        <outlet property="signinButton" destination="h1T-p0-UMv" id="Kux-8N-PgU"/>
-                        <outlet property="usernameTextField" destination="735-wn-W1D" id="Bes-fx-UHV"/>
+                        <outlet property="passwordTextField" destination="swR-un-OyV" id="jN2-hV-hOe"/>
+                        <outlet property="signinButton" destination="h1T-p0-UMv" id="myx-T6-HLf"/>
+                        <outlet property="usernameTextField" destination="735-wn-W1D" id="gfY-Gm-yPk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ACg-DX-xZJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
