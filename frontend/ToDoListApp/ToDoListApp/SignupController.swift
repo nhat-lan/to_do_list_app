@@ -53,13 +53,23 @@ class SignupController: UIViewController {
             
             let params = ["username":usernameTextField.text, "password":passwordTextField.text,"name":nameTextField.text,"email":emailTextField.text] as! Dictionary<String, String>
             
-            _ = Api(path: "accounts", apiMethod: "POST", body: params)
-            
-            let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            
-            let nextView = storyboard.instantiateViewController(withIdentifier: "signin") as! LoginController
-            
-            self.navigationController?.pushViewController(nextView, animated:true)
+            let api = Api(path: "accounts", apiMethod: "POST", body: params)
+            _ = api.apiCall(callback: { data in
+                if String(describing: data!["status"]!) == "Already exist" {
+                    DispatchQueue.main.async {
+                        self.alert(controllerTitle: "Username is taken", message: "Use another username")
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+
+                        let nextView = storyboard.instantiateViewController(withIdentifier: "signin") as! LoginController
+
+                        self.navigationController?.pushViewController(nextView, animated:true)
+                    }
+                }
+                
+            })
         }
     }
     
