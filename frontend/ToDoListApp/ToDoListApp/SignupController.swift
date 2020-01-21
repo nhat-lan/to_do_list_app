@@ -68,7 +68,6 @@ class SignupController: UIViewController {
                         self.navigationController?.pushViewController(nextView, animated:true)
                     }
                 }
-                
             })
         }
     }

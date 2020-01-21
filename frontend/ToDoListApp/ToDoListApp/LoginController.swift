@@ -17,17 +17,11 @@ class LoginController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
     @IBOutlet weak var usernameTextField: UITextField!
-    
-    
     
     @IBOutlet weak var passwordTextField: UITextField!
     
-    
     @IBOutlet weak var signinButton: UIButton!
-    
-    
     
     @IBAction func singinButtonAction(_ sender: UIButton) {
         // check in database
@@ -51,7 +45,6 @@ class LoginController: UIViewController {
 
                     self.navigationController?.pushViewController(nextView, animated:true)
                 }
-
             }
         })
     }
