@@ -50,6 +50,11 @@ class SignupController: UIViewController {
             
             alert(controllerTitle: "Password Error", message: "Password confirmation doesn't match")
         } else {
+            
+            let params = ["username":usernameTextField.text, "password":passwordTextField.text,"name":nameTextField.text,"email":emailTextField.text] as! Dictionary<String, String>
+            
+            _ = Api(path: "accounts", apiMethod: "POST", body: params)
+            
             let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             
             let nextView = storyboard.instantiateViewController(withIdentifier: "signin") as! LoginController
