@@ -17,7 +17,33 @@ class Api {
         self.path = path
         self.apiMethod = apiMethod
         self.body = body
-        self.apiCall()
+    }
+    
+    func apiCall(callback: @escaping (Dictionary<String, AnyObject>?)->()) {
+        
+        let url = "http://localhost:10000/" + self.path
+
+        var request = URLRequest(url: URL(string: url)!)
+        request.httpMethod = self.apiMethod
+        if self.apiMethod != "GET" {
+            request.httpBody = try? JSONSerialization.data(withJSONObject: self.body, options: [])
+        }
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        let session = URLSession.shared
+        let task = session.dataTask(with: request, completionHandler: { data, response, error -> Void in
+            print(response!)
+            do {
+                let json = try JSONSerialization.jsonObject(with: data!) as! Dictionary<String, AnyObject>
+                print(json)
+                callback(json)
+            } catch {
+                print("error")
+                callback(nil)
+            }
+        })
+
+        task.resume()
     }
     
     func apiCall() {
@@ -26,7 +52,9 @@ class Api {
 
         var request = URLRequest(url: URL(string: url)!)
         request.httpMethod = self.apiMethod
-        request.httpBody = try? JSONSerialization.data(withJSONObject: self.body, options: [])
+        if self.apiMethod != "GET" {
+            request.httpBody = try? JSONSerialization.data(withJSONObject: self.body, options: [])
+        }
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
         let session = URLSession.shared
