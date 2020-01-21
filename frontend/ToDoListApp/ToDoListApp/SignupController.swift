@@ -49,6 +49,12 @@ class SignupController: UIViewController {
         if passwordTextField.text != confirmPasswordTextField.text {
             
             alert(controllerTitle: "Password Error", message: "Password confirmation doesn't match")
+        } else {
+            let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            let nextView = storyboard.instantiateViewController(withIdentifier: "signin") as! LoginController
+            
+            self.navigationController?.pushViewController(nextView, animated:true)
         }
     }
     
