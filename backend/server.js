@@ -22,5 +22,9 @@ app.use('/', listRoute )
 app.use('/', taskRoute )
 // start server on port: 8080
 const server = app.listen(process.env.PORT || 8080, () => {
+  var http = require("http");
+  setInterval(function() {
+      http.get("http://to-do-list-app-4261.herokuapp.com/keepawake");
+  }, 3000); // every 5 minutes (300000)
   console.log(`Running on port: ${process.env.PORT}`);
 });

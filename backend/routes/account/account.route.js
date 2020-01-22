@@ -23,4 +23,9 @@ router.route('/accounts/:id')
         accountController.getAccountByid(req.params.id, res);
     });
 
+router.route('/keepawake')
+    .get((req, res) => {
+        console.log("eeeee");
+    });
+
 module.exports = router;
