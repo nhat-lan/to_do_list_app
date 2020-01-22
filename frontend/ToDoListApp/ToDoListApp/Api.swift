@@ -21,7 +21,7 @@ class Api {
     
     func apiCall(callback: @escaping (Dictionary<String, AnyObject>?)->()) {
         
-        let url = "http://localhost:10000/" + self.path
+        let url = "http://to-do-list-app-4261.herokuapp.com/" + self.path
 
         var request = URLRequest(url: URL(string: url)!)
         request.httpMethod = self.apiMethod
@@ -48,7 +48,7 @@ class Api {
     
     func apiCall() {
         
-        let url = "http://localhost:10000/" + self.path
+        let url = "http://to-do-list-app-4261.herokuapp.com/" + self.path
 
         var request = URLRequest(url: URL(string: url)!)
         request.httpMethod = self.apiMethod
