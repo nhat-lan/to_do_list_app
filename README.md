@@ -2,18 +2,12 @@
 
 A simple mobile application for Iphone users to let them make a list of tasks that need to be reminded.
 
-The Features
-Pick a date from callendar
-Add new task
-Edit task
-Delete single task
-Delete completed tasks
-Delete all tasks
+This application helps iPhone users to make a list of tasks that need to be reminded, in order to organize their daily activities or just simply keeping memos. The app features include creating a new task, picking a date from Calendar, editing tasks, deleting a single task, and adding notes for each task. An alarm/notification system is decided to be our stretch goal.
 
 The technologies used:
-Swift 
-JavaScript
-Firebase
+*Swift 
+*JavaScript
+*Firebase
 
 Firebase: https://console.firebase.google.com/u/0/project/to-do-list-41b06/database/to-do-list-41b06/data
 
