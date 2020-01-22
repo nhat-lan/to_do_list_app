@@ -6,8 +6,10 @@ This application helps iPhone users to make a list of tasks that need to be remi
 
 The technologies used:
 * Swift 
-* JavaScript
+* Node.js
 * Firebase
+* Xcode
+* Heroku
 
 Firebase: https://console.firebase.google.com/u/0/project/to-do-list-41b06/database/to-do-list-41b06/data
 
