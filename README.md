@@ -14,3 +14,7 @@ The technologies used:
 Swift 
 JavaScript
 Firebase
+
+Firebase: https://console.firebase.google.com/u/0/project/to-do-list-41b06/database/to-do-list-41b06/data
+Heroku host server dashboard: http://to-do-list-app-4261.herokuapp.com/.To test our server, please visit: http://to-do-list-app-4261.herokuapp.com/accounts/216 . Which will fetch data from Firebase. The only issue with Heruko is that it would go to deactivation mode every ~30 mins, so in order to keep Heroku node app from sleeping, I have followed tutorials from this website (source: https://quickleft.com/blog/6-easy-ways-to-prevent-your-heroku-node-app-from-sleeping/) to make an auto call REQUEST every five minutes to keep it awake. 
+
